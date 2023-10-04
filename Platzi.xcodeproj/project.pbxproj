@@ -51,10 +51,15 @@
 		2FD513A72ACE15EF006388ED /* Platzi */ = {
 			isa = PBXGroup;
 			children = (
-				2FD513A82ACE15EF006388ED /* PlatziApp.swift */,
-				2FD513AA2ACE15EF006388ED /* ContentView.swift */,
 				2FD513AC2ACE15F1006388ED /* Assets.xcassets */,
+				2FD513AA2ACE15EF006388ED /* ContentView.swift */,
+				2FD513B62ACE1698006388ED /* Model */,
+				2FD513A82ACE15EF006388ED /* PlatziApp.swift */,
 				2FD513AE2ACE15F1006388ED /* Preview Content */,
+				2FD513B92ACE16AB006388ED /* Service */,
+				2FD513BA2ACE16B2006388ED /* Utilities */,
+				2FD513B72ACE169C006388ED /* View */,
+				2FD513B82ACE16A0006388ED /* ViewModel */,
 			);
 			path = Platzi;
 			sourceTree = "<group>";
@@ -65,6 +70,41 @@
 				2FD513AF2ACE15F1006388ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FD513B62ACE1698006388ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2FD513B72ACE169C006388ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2FD513B82ACE16A0006388ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2FD513B92ACE16AB006388ED /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2FD513BA2ACE16B2006388ED /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
