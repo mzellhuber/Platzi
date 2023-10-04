@@ -15,6 +15,7 @@
 		2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BD2ACE1F65006388ED /* Movie.swift */; };
 		2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BF2ACE2060006388ED /* NetworkService.swift */; };
 		2FD513C22ACE2088006388ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513C12ACE2088006388ED /* Config.plist */; };
+		2FD513C42ACE2574006388ED /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C32ACE2574006388ED /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2FD513BD2ACE1F65006388ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2FD513BF2ACE2060006388ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2FD513C12ACE2088006388ED /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		2FD513C32ACE2574006388ED /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		2FD513BA2ACE16B2006388ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2FD513C32ACE2574006388ED /* ImageLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */,
 				2FD513BC2ACE1F32006388ED /* APIResult.swift in Sources */,
+				2FD513C42ACE2574006388ED /* ImageLoader.swift in Sources */,
 				2FD513AB2ACE15EF006388ED /* ContentView.swift in Sources */,
 				2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */,
 				2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */,
