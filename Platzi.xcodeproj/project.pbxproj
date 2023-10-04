@@ -13,6 +13,8 @@
 		2FD513B02ACE15F1006388ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513AF2ACE15F1006388ED /* Preview Assets.xcassets */; };
 		2FD513BC2ACE1F32006388ED /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BB2ACE1F32006388ED /* APIResult.swift */; };
 		2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BD2ACE1F65006388ED /* Movie.swift */; };
+		2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BF2ACE2060006388ED /* NetworkService.swift */; };
+		2FD513C22ACE2088006388ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513C12ACE2088006388ED /* Config.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2FD513AF2ACE15F1006388ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2FD513BB2ACE1F32006388ED /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		2FD513BD2ACE1F65006388ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2FD513BF2ACE2060006388ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		2FD513C12ACE2088006388ED /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				2FD513BA2ACE16B2006388ED /* Utilities */,
 				2FD513B72ACE169C006388ED /* View */,
 				2FD513B82ACE16A0006388ED /* ViewModel */,
+				2FD513C12ACE2088006388ED /* Config.plist */,
 			);
 			path = Platzi;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 		2FD513B92ACE16AB006388ED /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				2FD513BF2ACE2060006388ED /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD513B02ACE15F1006388ED /* Preview Assets.xcassets in Resources */,
+				2FD513C22ACE2088006388ED /* Config.plist in Resources */,
 				2FD513AD2ACE15F1006388ED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */,
 				2FD513BC2ACE1F32006388ED /* APIResult.swift in Sources */,
 				2FD513AB2ACE15EF006388ED /* ContentView.swift in Sources */,
 				2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */,

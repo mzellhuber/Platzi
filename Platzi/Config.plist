@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>JWT_TOKEN</key>
+	<string>eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMTM0M2U3YTFhZDBmY2IwZjAyM2YzZWMwYWNkNWE5NyIsInN1YiI6IjVjMDczOTdkYzNhMzY4NjlhZTBlZTk4NSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.TvaGMA5P8oZzDWJJgE1Ej-nzyh2x-dw2T9GUfz6xyes</string>
+	<key>API_KEY</key>
+	<string>31343e7a1ad0fcb0f023f3ec0acd5a97</string>
+</dict>
+</plist>
