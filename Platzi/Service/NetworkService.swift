@@ -47,6 +47,19 @@ class NetworkService {
         return movies
     }
     
+    func fetchMovieVideo(for movieID: Int) async throws -> Video? {
+        guard let url = URL(string: "\(baseURL)\(movieID)/videos") else {
+            throw NetworkError.invalidURL
+        }
+
+        do {
+            let videoResponse: VideoResult = try await request(url: url)
+            return videoResponse.results.first(where: { $0.site == .youTube && $0.type == .trailer })
+        } catch {
+            throw error
+        }
+    }
+    
     private func request<T: Decodable>(url: URL) async throws -> T {
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         request.httpMethod = "GET"

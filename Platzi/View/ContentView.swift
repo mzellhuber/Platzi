@@ -16,10 +16,15 @@ struct MovieListView: View {
             ScrollView {
                 LazyVStack(spacing: 20) {
                     ForEach(viewModel.movies) { movie in
-                        MovieRow(movie: movie)
-                            .padding(.leading)
-                            .background(Color.gray.opacity(0.5))
-                            .padding(.top, 10)
+                        NavigationLink(destination: MovieDetailView(viewModel: MovieDetailsViewModel(movie: movie))) {
+                            MovieRow(movie: movie)
+                                .padding(.leading)
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(15)
+                                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                                .padding(.top, 10)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
