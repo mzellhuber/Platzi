@@ -15,10 +15,12 @@
 		2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BD2ACE1F65006388ED /* Movie.swift */; };
 		2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BF2ACE2060006388ED /* NetworkService.swift */; };
 		2FD513C22ACE2088006388ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513C12ACE2088006388ED /* Config.plist */; };
-		2FD513C42ACE2574006388ED /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C32ACE2574006388ED /* ImageLoader.swift */; };
 		2FD513C62ACE25C7006388ED /* PaginationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C52ACE25C7006388ED /* PaginationService.swift */; };
 		2FD513C82ACE261A006388ED /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C72ACE261A006388ED /* PaginationManager.swift */; };
 		2FD513CA2ACE4B7D006388ED /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C92ACE4B7D006388ED /* MovieListViewModel.swift */; };
+		2FD513CC2ACEB5DD006388ED /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513CB2ACEB5DD006388ED /* MovieRow.swift */; };
+		2FD513CE2ACEBE2E006388ED /* VideoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513CD2ACEBE2E006388ED /* VideoResult.swift */; };
+		2FD513D02ACEBE39006388ED /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513CF2ACEBE39006388ED /* Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +33,12 @@
 		2FD513BD2ACE1F65006388ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2FD513BF2ACE2060006388ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2FD513C12ACE2088006388ED /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
-		2FD513C32ACE2574006388ED /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2FD513C52ACE25C7006388ED /* PaginationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationService.swift; sourceTree = "<group>"; };
 		2FD513C72ACE261A006388ED /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
 		2FD513C92ACE4B7D006388ED /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		2FD513CB2ACEB5DD006388ED /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		2FD513CD2ACEBE2E006388ED /* VideoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResult.swift; sourceTree = "<group>"; };
+		2FD513CF2ACEBE39006388ED /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			children = (
 				2FD513BB2ACE1F32006388ED /* APIResult.swift */,
 				2FD513BD2ACE1F65006388ED /* Movie.swift */,
+				2FD513CD2ACEBE2E006388ED /* VideoResult.swift */,
+				2FD513CF2ACEBE39006388ED /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD513AA2ACE15EF006388ED /* ContentView.swift */,
+				2FD513CB2ACEB5DD006388ED /* MovieRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,7 +132,6 @@
 		2FD513BA2ACE16B2006388ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2FD513C32ACE2574006388ED /* ImageLoader.swift */,
 				2FD513C72ACE261A006388ED /* PaginationManager.swift */,
 			);
 			path = Utilities;
@@ -203,11 +209,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */,
+				2FD513CC2ACEB5DD006388ED /* MovieRow.swift in Sources */,
 				2FD513BC2ACE1F32006388ED /* APIResult.swift in Sources */,
-				2FD513C42ACE2574006388ED /* ImageLoader.swift in Sources */,
 				2FD513AB2ACE15EF006388ED /* ContentView.swift in Sources */,
 				2FD513BE2ACE1F65006388ED /* Movie.swift in Sources */,
 				2FD513C62ACE25C7006388ED /* PaginationService.swift in Sources */,
+				2FD513CE2ACEBE2E006388ED /* VideoResult.swift in Sources */,
+				2FD513D02ACEBE39006388ED /* Video.swift in Sources */,
 				2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */,
 				2FD513C82ACE261A006388ED /* PaginationManager.swift in Sources */,
 				2FD513CA2ACE4B7D006388ED /* MovieListViewModel.swift in Sources */,

@@ -16,6 +16,7 @@ struct Movie: Codable, Identifiable {
     let video: Bool
     let voteAverage: Double
     let voteCount: Int
+    var videoKey: String?
 
     enum CodingKeys: String, CodingKey {
         case adult
