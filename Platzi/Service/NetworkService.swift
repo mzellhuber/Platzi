@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 enum NetworkError: Error {
     case invalidURL
@@ -39,25 +38,13 @@ class NetworkService {
         return nil
     }
     
-    func fetchMovies(ofType type: MovieType, page: Int = 1) -> AnyPublisher<APIResult<Movie>, NetworkError> {
+    func fetchMovies(ofType type: MovieType, page: Int = 1) async throws -> APIResult<Movie> {
         guard let url = URL(string: "\(baseURL)\(type.rawValue)?page=\(page)") else {
-            return Fail(error: NetworkError.invalidURL).eraseToAnyPublisher()
+            throw NetworkError.invalidURL
         }
         
-        return Future { promise in
-            Task {
-                do {
-                    let movies: APIResult<Movie> = try await self.request(url: url)
-                    promise(.success(movies))
-                } catch {
-                    if let networkError = error as? NetworkError {
-                        promise(.failure(networkError))
-                    } else {
-                        promise(.failure(.unknownError(error)))
-                    }
-                }
-            }
-        }.eraseToAnyPublisher()
+        let movies: APIResult<Movie> = try await self.request(url: url)
+        return movies
     }
     
     private func request<T: Decodable>(url: URL) async throws -> T {

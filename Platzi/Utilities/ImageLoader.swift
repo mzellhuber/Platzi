@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageLoader {
+class ImageLoader: ObservableObject {
     private let cache = NSCache<NSString, UIImage>()
     
     func loadImage(from urlString: String) async -> UIImage? {
