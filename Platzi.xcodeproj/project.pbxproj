@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FBCA4742ACF6C4500E01E62 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4732ACF6C4500E01E62 /* Realm */; };
+		2FBCA4762ACF6C4500E01E62 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4752ACF6C4500E01E62 /* RealmSwift */; };
 		2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513A82ACE15EF006388ED /* PlatziApp.swift */; };
 		2FD513AB2ACE15EF006388ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513AA2ACE15EF006388ED /* ContentView.swift */; };
 		2FD513AD2ACE15F1006388ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513AC2ACE15F1006388ED /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBCA4762ACF6C4500E01E62 /* RealmSwift in Frameworks */,
+				2FBCA4742ACF6C4500E01E62 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +166,10 @@
 			dependencies = (
 			);
 			name = Platzi;
+			packageProductDependencies = (
+				2FBCA4732ACF6C4500E01E62 /* Realm */,
+				2FBCA4752ACF6C4500E01E62 /* RealmSwift */,
+			);
 			productName = Platzi;
 			productReference = 2FD513A52ACE15EF006388ED /* Platzi.app */;
 			productType = "com.apple.product-type.application";
@@ -190,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 2FD5139C2ACE15EF006388ED;
+			packageReferences = (
+				2FBCA4722ACF6C4500E01E62 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = 2FD513A62ACE15EF006388ED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -436,6 +447,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2FBCA4722ACF6C4500E01E62 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2FBCA4732ACF6C4500E01E62 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FBCA4722ACF6C4500E01E62 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		2FBCA4752ACF6C4500E01E62 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FBCA4722ACF6C4500E01E62 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2FD5139D2ACE15EF006388ED /* Project object */;
 }
