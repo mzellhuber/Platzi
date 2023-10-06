@@ -10,6 +10,7 @@ import Combine
 
 struct MovieListView: View {
     @StateObject private var viewModel = MovieListViewModel()
+    @ObservedObject var networkMonitor = NetworkMonitor()
 
     var body: some View {
         NavigationView {
@@ -19,6 +20,9 @@ struct MovieListView: View {
                 
                 ScrollView {
                     LazyVStack(spacing: 20) {
+                        if !networkMonitor.isConnected {
+                            OfflineBanner()
+                        }
                         ForEach(viewModel.movies) { movie in
                             NavigationLink(destination: MovieDetailView(viewModel: MovieDetailsViewModel(movie: movie))) {
                                 MovieRow(movie: movie)

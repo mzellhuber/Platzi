@@ -12,6 +12,7 @@ struct MovieDetailView: View {
     @ObservedObject var viewModel: MovieDetailsViewModel
     @State private var loadedImage: UIImage?
     private let imageLoader = ImageLoader()
+    @ObservedObject var networkMonitor = NetworkMonitor()
 
     var body: some View {
         ZStack {
@@ -20,6 +21,9 @@ struct MovieDetailView: View {
             
             ScrollView {
                 VStack(alignment: .center, spacing: 20) {
+                    if !networkMonitor.isConnected {
+                        OfflineBanner()
+                    }
                     if let image = loadedImage {
                         Image(uiImage: image)
                             .resizable()
@@ -43,19 +47,21 @@ struct MovieDetailView: View {
                         .shadow(radius: 5)
                         .foregroundColor(.black)
                     
-                    if viewModel.videoKey == nil {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
-                            .scaleEffect(1.5)
-                            .frame(width: 340, height: 200)
-                            .background(Color.white.opacity(0.8))
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                    } else if let videoKey = viewModel.videoKey {
-                        WebView(url: URL(string: "https://www.youtube.com/embed/\(videoKey)")!)
-                            .cornerRadius(15)
-                            .shadow(radius: 5)
-                            .frame(width: 340, height: 200)
+                    if networkMonitor.isConnected {
+                        if viewModel.videoKey == nil {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
+                                .scaleEffect(1.5)
+                                .frame(width: 340, height: 200)
+                                .background(Color.white.opacity(0.8))
+                                .cornerRadius(15)
+                                .shadow(radius: 5)
+                        } else if let videoKey = viewModel.videoKey {
+                            WebView(url: URL(string: "https://www.youtube.com/embed/\(videoKey)")!)
+                                .cornerRadius(15)
+                                .shadow(radius: 5)
+                                .frame(width: 340, height: 200)
+                        }
                     }
                 }
                 .padding(.top, 30)
