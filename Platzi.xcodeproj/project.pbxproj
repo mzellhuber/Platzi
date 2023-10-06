@@ -12,6 +12,7 @@
 		2F9279B22ACFB24B00F8F557 /* OfflineBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9279B12ACFB24B00F8F557 /* OfflineBanner.swift */; };
 		2FBCA4742ACF6C4500E01E62 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4732ACF6C4500E01E62 /* Realm */; };
 		2FBCA4762ACF6C4500E01E62 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4752ACF6C4500E01E62 /* RealmSwift */; };
+		2FC753232AD0B27E001DA022 /* PlatziTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC753222AD0B27E001DA022 /* PlatziTests.swift */; };
 		2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513A82ACE15EF006388ED /* PlatziApp.swift */; };
 		2FD513AB2ACE15EF006388ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513AA2ACE15EF006388ED /* ContentView.swift */; };
 		2FD513AD2ACE15F1006388ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513AC2ACE15F1006388ED /* Assets.xcassets */; };
@@ -31,10 +32,22 @@
 		2FD513DE2ACF3F37006388ED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513DD2ACF3F37006388ED /* WebView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2FC753242AD0B27E001DA022 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FD5139D2ACE15EF006388ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FD513A42ACE15EF006388ED;
+			remoteInfo = Platzi;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2F9279AD2ACF9DE700F8F557 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2F9279AF2ACFB1A400F8F557 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		2F9279B12ACFB24B00F8F557 /* OfflineBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineBanner.swift; sourceTree = "<group>"; };
+		2FC753202AD0B27E001DA022 /* PlatziTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlatziTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC753222AD0B27E001DA022 /* PlatziTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatziTests.swift; sourceTree = "<group>"; };
 		2FD513A52ACE15EF006388ED /* Platzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Platzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD513A82ACE15EF006388ED /* PlatziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatziApp.swift; sourceTree = "<group>"; };
 		2FD513AA2ACE15EF006388ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2FC7531D2AD0B27E001DA022 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FD513A22ACE15EF006388ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,10 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FC753212AD0B27E001DA022 /* PlatziTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FC753222AD0B27E001DA022 /* PlatziTests.swift */,
+			);
+			path = PlatziTests;
+			sourceTree = "<group>";
+		};
 		2FD5139C2ACE15EF006388ED = {
 			isa = PBXGroup;
 			children = (
 				2FD513A72ACE15EF006388ED /* Platzi */,
+				2FC753212AD0B27E001DA022 /* PlatziTests */,
 				2FD513A62ACE15EF006388ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				2FD513A52ACE15EF006388ED /* Platzi.app */,
+				2FC753202AD0B27E001DA022 /* PlatziTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +192,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2FC7531F2AD0B27E001DA022 /* PlatziTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FC753282AD0B27E001DA022 /* Build configuration list for PBXNativeTarget "PlatziTests" */;
+			buildPhases = (
+				2FC7531C2AD0B27E001DA022 /* Sources */,
+				2FC7531D2AD0B27E001DA022 /* Frameworks */,
+				2FC7531E2AD0B27E001DA022 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FC753252AD0B27E001DA022 /* PBXTargetDependency */,
+			);
+			name = PlatziTests;
+			productName = PlatziTests;
+			productReference = 2FC753202AD0B27E001DA022 /* PlatziTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2FD513A42ACE15EF006388ED /* Platzi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FD513B32ACE15F1006388ED /* Build configuration list for PBXNativeTarget "Platzi" */;
@@ -193,6 +241,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					2FC7531F2AD0B27E001DA022 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2FD513A42ACE15EF006388ED;
+					};
 					2FD513A42ACE15EF006388ED = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -215,11 +267,19 @@
 			projectRoot = "";
 			targets = (
 				2FD513A42ACE15EF006388ED /* Platzi */,
+				2FC7531F2AD0B27E001DA022 /* PlatziTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2FC7531E2AD0B27E001DA022 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FD513A32ACE15EF006388ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +293,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2FC7531C2AD0B27E001DA022 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FC753232AD0B27E001DA022 /* PlatziTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2FD513A12ACE15EF006388ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,7 +327,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2FC753252AD0B27E001DA022 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FD513A42ACE15EF006388ED /* Platzi */;
+			targetProxy = 2FC753242AD0B27E001DA022 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2FC753262AD0B27E001DA022 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5K8CL3D92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mzellhuber.PlatziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Platzi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Platzi";
+			};
+			name = Debug;
+		};
+		2FC753272AD0B27E001DA022 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5K8CL3D92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mzellhuber.PlatziTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Platzi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Platzi";
+			};
+			name = Release;
+		};
 		2FD513B12ACE15F1006388ED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -394,6 +506,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +536,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +554,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2FC753282AD0B27E001DA022 /* Build configuration list for PBXNativeTarget "PlatziTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FC753262AD0B27E001DA022 /* Debug */,
+				2FC753272AD0B27E001DA022 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2FD513A02ACE15EF006388ED /* Build configuration list for PBXProject "Platzi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
