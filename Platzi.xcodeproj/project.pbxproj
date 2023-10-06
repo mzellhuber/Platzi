@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F9279AE2ACF9DE700F8F557 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9279AD2ACF9DE700F8F557 /* ImageLoader.swift */; };
+		2F9279B02ACFB1A400F8F557 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9279AF2ACFB1A400F8F557 /* NetworkMonitor.swift */; };
 		2FBCA4742ACF6C4500E01E62 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4732ACF6C4500E01E62 /* Realm */; };
 		2FBCA4762ACF6C4500E01E62 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2FBCA4752ACF6C4500E01E62 /* RealmSwift */; };
 		2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513A82ACE15EF006388ED /* PlatziApp.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		2F9279AD2ACF9DE700F8F557 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		2F9279AF2ACFB1A400F8F557 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		2FD513A52ACE15EF006388ED /* Platzi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Platzi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD513A82ACE15EF006388ED /* PlatziApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatziApp.swift; sourceTree = "<group>"; };
 		2FD513AA2ACE15EF006388ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				2FD513C72ACE261A006388ED /* PaginationManager.swift */,
 				2F9279AD2ACF9DE700F8F557 /* ImageLoader.swift */,
+				2F9279AF2ACFB1A400F8F557 /* NetworkMonitor.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */,
+				2F9279B02ACFB1A400F8F557 /* NetworkMonitor.swift in Sources */,
 				2FD513CC2ACEB5DD006388ED /* MovieRow.swift in Sources */,
 				2F9279AE2ACF9DE700F8F557 /* ImageLoader.swift in Sources */,
 				2FD513BC2ACE1F32006388ED /* APIResult.swift in Sources */,

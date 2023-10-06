@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct MovieDetailView: View {
     @ObservedObject var viewModel: MovieDetailsViewModel
+    @State private var loadedImage: UIImage?
+    private let imageLoader = ImageLoader()
 
     var body: some View {
         ZStack {
@@ -17,20 +20,17 @@ struct MovieDetailView: View {
             
             ScrollView {
                 VStack(alignment: .center, spacing: 20) {
-                    AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500\(viewModel.movie.posterPath ?? "")")) { phase in
-                        switch phase {
-                        case .success(let image):
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(15)
-                                .shadow(radius: 10)
-                                .frame(width: 220, height: 330)
-                        default:
-                            RoundedRectangle(cornerRadius: 15)
-                                .fill(Color.gray.opacity(0.3))
-                                .frame(width: 220, height: 330)
-                        }
+                    if let image = loadedImage {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(15)
+                            .shadow(radius: 10)
+                            .frame(width: 220, height: 330)
+                    } else {
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.gray.opacity(0.3))
+                            .frame(width: 220, height: 330)
                     }
                     
                     Text(viewModel.movie.overview)
@@ -62,6 +62,19 @@ struct MovieDetailView: View {
             }
         }
         .navigationBarTitle(viewModel.movie.title, displayMode: .inline)
-        .onAppear(perform: viewModel.fetchMovieVideo)
+        .onAppear {
+            loadMovieImage()
+            viewModel.fetchMovieVideo()
+        }
+    }
+
+    func loadMovieImage() {
+        if let imageData = viewModel.movie.imageData, let image = UIImage(data: imageData) {
+            loadedImage = image
+        } else {
+            Task {
+                loadedImage = await imageLoader.loadImage(from: "https://image.tmdb.org/t/p/w500\(viewModel.movie.posterPath )")
+            }
+        }
     }
 }
