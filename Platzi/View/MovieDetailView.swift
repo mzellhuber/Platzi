@@ -36,6 +36,11 @@ struct MovieDetailView: View {
                             .frame(width: 220, height: 330)
                     }
                     
+                    if let year = viewModel.movie.releaseDate.split(separator: "-").first {
+                        Text(String(year))
+                            .font(.subheadline)
+                    }
+                    
                     Text(viewModel.movie.overview)
                         .font(.body)
                         .multilineTextAlignment(.center)

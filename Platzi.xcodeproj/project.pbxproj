@@ -23,7 +23,6 @@
 		2FD513C02ACE2060006388ED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513BF2ACE2060006388ED /* NetworkService.swift */; };
 		2FD513C22ACE2088006388ED /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD513C12ACE2088006388ED /* Config.plist */; };
 		2FD513C62ACE25C7006388ED /* PaginationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C52ACE25C7006388ED /* PaginationService.swift */; };
-		2FD513C82ACE261A006388ED /* PaginationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C72ACE261A006388ED /* PaginationManager.swift */; };
 		2FD513CA2ACE4B7D006388ED /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513C92ACE4B7D006388ED /* MovieListViewModel.swift */; };
 		2FD513CC2ACEB5DD006388ED /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513CB2ACEB5DD006388ED /* MovieRow.swift */; };
 		2FD513CE2ACEBE2E006388ED /* VideoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD513CD2ACEBE2E006388ED /* VideoResult.swift */; };
@@ -60,7 +59,6 @@
 		2FD513BF2ACE2060006388ED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		2FD513C12ACE2088006388ED /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		2FD513C52ACE25C7006388ED /* PaginationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationService.swift; sourceTree = "<group>"; };
-		2FD513C72ACE261A006388ED /* PaginationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationManager.swift; sourceTree = "<group>"; };
 		2FD513C92ACE4B7D006388ED /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		2FD513CB2ACEB5DD006388ED /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
 		2FD513CD2ACEBE2E006388ED /* VideoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResult.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		2FD513BA2ACE16B2006388ED /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2FD513C72ACE261A006388ED /* PaginationManager.swift */,
 				2F9279AD2ACF9DE700F8F557 /* ImageLoader.swift */,
 				2F9279AF2ACFB1A400F8F557 /* NetworkMonitor.swift */,
 				2F523A9A2AD1DB6500F5BB2D /* DispatchQueues.swift */,
@@ -322,7 +319,6 @@
 				2FD513D02ACEBE39006388ED /* Video.swift in Sources */,
 				2FD513DA2ACF3ECE006388ED /* MovieDetailsViewModel.swift in Sources */,
 				2FD513A92ACE15EF006388ED /* PlatziApp.swift in Sources */,
-				2FD513C82ACE261A006388ED /* PaginationManager.swift in Sources */,
 				2F523A9B2AD1DB6500F5BB2D /* DispatchQueues.swift in Sources */,
 				2FD513CA2ACE4B7D006388ED /* MovieListViewModel.swift in Sources */,
 				2FD513DE2ACF3F37006388ED /* WebView.swift in Sources */,
