@@ -40,17 +40,15 @@ struct MovieRow: View {
             .padding(.trailing, 10)
         }
         .task {
-            do {
-                loadedImage = try await imageLoader.loadImage(from: "https://image.tmdb.org/t/p/w200\(movie.posterPath )")
-                
-                if let data = loadedImage?.pngData() {
-                    guard let realm = try? await Realm() else { return }
+            loadedImage = await imageLoader.loadImage(from: "https://image.tmdb.org/t/p/w200\(movie.posterPath )")
+            
+            if let data = loadedImage?.pngData() {
+                realmQueue.async {
+                    guard let realm = try? Realm() else { return }
                     try? realm.write {
                         movie.imageData = data
                     }
                 }
-            } catch {
-                print("Failed to load image: \(error)")
             }
         }
     }

@@ -28,7 +28,7 @@ class NetworkService {
     
     private let baseURL = URL(string: "https://api.themoviedb.org/3/movie/")!
     
-    private init() {}
+    public init() {}
     
     private var jwtToken: String? {
         if let path = Bundle.main.path(forResource: "Config", ofType: "plist"),

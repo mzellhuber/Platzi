@@ -17,15 +17,18 @@ class MovieListViewModel: ObservableObject {
             do {
                 let movieResults = try await NetworkService.shared.fetchMovies(ofType: type)
                 
-                guard let realm = try? await Realm() else {
-                    print("no realm")
-                    return
-                }
-
-                DispatchQueue.main.async {
-                    self.movies = movieResults.results
+                realmQueue.async {
+                    guard let realm = try? Realm() else {
+                        print("no realm")
+                        return
+                    }
                     try? realm.write {
-                        realm.add(self.movies, update: .modified)
+                        realm.add(movieResults.results, update: .modified)
+                    }
+                    
+                    let unmanagedMovies = movieResults.results.map { Movie(value: $0) }
+                    DispatchQueue.main.async {
+                        self.movies = unmanagedMovies
                     }
                 }
             } catch {
