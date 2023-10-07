@@ -12,6 +12,7 @@ struct PlatziApp: App {
     var body: some Scene {
         WindowGroup {
             MovieListView()
+                .preferredColorScheme(.dark)
         }
     }
 }

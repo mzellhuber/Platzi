@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import RealmSwift
 
 struct MovieDetailView: View {
     @ObservedObject var viewModel: MovieDetailsViewModel

@@ -10,6 +10,7 @@ import Foundation
 class MovieDetailsViewModel: ObservableObject {
     var movie: Movie
     private var networkService: NetworkService
+    var networkMonitor = NetworkMonitor()
 
     @Published var videoKey: String?
 
@@ -19,17 +20,18 @@ class MovieDetailsViewModel: ObservableObject {
     }
 
     func fetchMovieVideo() {
-        Task {
-            do {
-                if let video = try await networkService.fetchMovieVideo(for: movie.id) {
-                    DispatchQueue.main.async {
-                        self.videoKey = video.key
+        if networkMonitor.isConnected {
+            Task {
+                do {
+                    if let video = try await networkService.fetchMovieVideo(for: movie.id) {
+                        DispatchQueue.main.async {
+                            self.videoKey = video.key
+                        }
                     }
+                } catch {
+                    print("Error: \(error)")
                 }
-            } catch {
-                print("Error: \(error)")
             }
         }
     }
-
 }
