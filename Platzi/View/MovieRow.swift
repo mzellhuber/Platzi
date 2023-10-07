@@ -15,16 +15,23 @@ struct MovieRow: View {
 
     var body: some View {
         HStack(spacing: 20) {
-            // Image
-            if let image = loadedImage {
-                Image(uiImage: image)
-                    .resizable()
-                    .frame(width: 100, height: 150)
-                    .cornerRadius(10)
-            } else {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.gray.opacity(0.3))
-                    .frame(width: 100, height: 150)
+            VStack {
+                // Image
+                if let image = loadedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .frame(width: 100, height: 150)
+                        .cornerRadius(10)
+                } else {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(width: 100, height: 150)
+                }
+                
+                if let year = movie.releaseDate.split(separator: "-").first {
+                    Text(String(year))
+                        .font(.subheadline)
+                }
             }
             
             // Movie Details
