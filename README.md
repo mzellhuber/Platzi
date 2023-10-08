@@ -1,4 +1,3 @@
-
 📱 Platzi
 
 ### 🌟 Resumen
@@ -9,6 +8,10 @@
 - **Tráileres de YouTube 📺**: ¿Quieres ver un adelanto? Cada película cuenta con su tráiler de YouTube.
 - **Persistencia Local con Realm 📁**: No te preocupes por los datos, usamos Realm para guardar todo localmente.
 - **Modo Offline 🚫💻**: ¿Sin internet? ¡No hay problema! Puedes disfrutar de las películas que ya has cargado anteriormente.
+- **Prefetching Automático ⏭**: A medida que desplazas, la aplicación automáticamente carga más películas para que no tengas que esperar.
+
+### 🔮 Expansión Futura
+La aplicación está diseñada con la expansión en mente. Con nuestro `enum MovieType`, puedes agregar o cambiar los tipos de películas que quieres mostrar, como las más populares, las mejor calificadas o las próximas películas.
 
 ### 🛠 Estructura del Proyecto
 - **Platzi.xcodeproj**: El corazón de nuestro proyecto en Xcode.
@@ -19,7 +22,7 @@
   - `View`: Donde la interfaz cobra vida.
   - `Service`: Conexión con el mundo exterior, peticiones de red y más.
   - `Utilities`: Herramientas que nos facilitan la vida.
-  - `Assets.xcassets`: Todas esas imágenes y íconos bonitos.
+  - `Assets.xcassets`: Todas esas imágenes e íconos bonitos.
   - `Preview Content`: Un vistazo al futuro, para previsualizaciones en Xcode.
   - `PlatziApp.swift`: ¡Aquí empieza todo!
   - `Config.plist`: Nuestros secretos mejor guardados, bueno, no todos.
